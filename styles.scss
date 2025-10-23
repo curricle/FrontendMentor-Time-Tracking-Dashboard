@@ -24,16 +24,21 @@ main {
 }
 
 .card {
-    background: $navy-900;
     border-radius: $spacing-300;
     width: 255px;
 }
 
+#profile {
+    background: $navy-900;
+}
+
 #profile__info {
   @include flex-column;
+  gap: $spacing-500;
+  height: 354px;
   background: $purple-600;   
   border-radius: $spacing-300;
-  padding: $spacing-300;
+  padding: $spacing-400;
 
   h1 {
     @include flex-column;
@@ -57,7 +62,7 @@ main {
     @include flex-column;
     justify-content: flex-start;
     gap: $spacing-200;
-    padding: $spacing-300;
+    padding: $spacing-400;
 
     button {
         text-align: left;
@@ -79,7 +84,9 @@ main {
 }
 
 .card__header {
-    height: $spacing-400;
+    height: 150px;
+    margin-bottom: -100px;
+    border-radius: $spacing-300;
 }
 
 #work-header {
@@ -102,7 +109,12 @@ main {
 }
 
 .card__info {
-    padding: $spacing-300;
+    @include flex-column;
+    gap: $spacing-300;
+    height: 200px;
+    padding: $spacing-400;
+    border-radius: $spacing-300;
+    background: $navy-900;
 }
 
 .card__menu {
