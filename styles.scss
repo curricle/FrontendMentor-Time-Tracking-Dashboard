@@ -33,6 +33,7 @@ main {
   @include flex-column;
   background: $purple-600;   
   border-radius: $spacing-300;
+  padding: $spacing-300;
 
   h1 {
     @include flex-column;
@@ -56,6 +57,7 @@ main {
     @include flex-column;
     justify-content: flex-start;
     gap: $spacing-200;
+    padding: $spacing-300;
 
     button {
         text-align: left;
@@ -98,6 +100,11 @@ main {
 #self-care-header {
     background: $yellow-300;
 }
+
+.card__info {
+    padding: $spacing-300;
+}
+
 .card__menu {
     display: flex;
     align-items: center;
@@ -107,6 +114,10 @@ main {
 
 .card__stats {
     @include flex-column;
+}
+
+.card__current-stat {
+    @include text-style($size: 56px, $line-height: 66px);
 }
 
 .attribution { 

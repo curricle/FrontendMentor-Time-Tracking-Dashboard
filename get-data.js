@@ -49,8 +49,8 @@ function populateCards(data, timescale) {
           <img src="images/icon-ellipsis.svg" />
         </section>
         <section class="card__stats">
-          <span class="card__current_stat">${entry.timeframes[timescale].current}hrs</span>
-          <span class="card__previous_stat">${timeframeIndicator} - ${entry.timeframes[timescale].previous}hrs</span>
+          <span class="card__current-stat">${entry.timeframes[timescale].current}hrs</span>
+          <span class="card__previous-stat">${timeframeIndicator} - ${entry.timeframes[timescale].previous}hrs</span>
         </section>
       </section>
     </section>`

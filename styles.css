@@ -35,6 +35,7 @@ main {
   flex-direction: column;
   background: hsl(246, 80%, 60%);
   border-radius: 24px;
+  padding: 24px;
 }
 #profile__info h1 {
   display: flex;
@@ -61,6 +62,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   gap: 16px;
+  padding: 24px;
 }
 #profile__menu button {
   text-align: left;
@@ -107,6 +109,10 @@ main {
   background: hsl(43, 84%, 65%);
 }
 
+.card__info {
+  padding: 24px;
+}
+
 .card__menu {
   display: flex;
   align-items: center;
@@ -117,6 +123,13 @@ main {
 .card__stats {
   display: flex;
   flex-direction: column;
+}
+
+.card__current-stat {
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(40.32px, 4vw, 56px);
+  line-height: 66px;
+  font-weight: 300;
 }
 
 .attribution {
