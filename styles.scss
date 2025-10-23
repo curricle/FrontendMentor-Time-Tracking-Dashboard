@@ -1,22 +1,17 @@
 @use "./styles/mixins" as *;
 @use "./styles/variables" as *;
 
-@font-face {
-    font-family: "Rubik";
-    src: url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
+    @include text-style;
     color: $white;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
+    gap: $spacing-400;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -31,11 +26,34 @@ main {
 .card {
     background: $navy-900;
     border-radius: $spacing-300;
+    width: 255px;
+}
+
+#profile__info {
+  @include flex-column;
+  background: $purple-600;   
+  border-radius: $spacing-300;
+
+  h1 {
+    @include flex-column;
+    @include text-style($size: $spacing-500, $line-height: 47px);
+
+    span {
+        font-size: $spacing-200;
+        color: $navy-200;
+    }
+  }
+}
+
+#profile__picture img {
+    height: 78px;
+    width: 78px;
+    border-radius: $spacing-500;
+    border: 3px $white solid;
 }
 
 #profile__menu {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: flex-start;
     gap: $spacing-200;
 
@@ -58,6 +76,28 @@ main {
     gap: $spacing-400;
 }
 
+.card__header {
+    height: $spacing-400;
+}
+
+#work-header {
+    background: $orange-300;
+}
+#play-header {
+    background: $blue-300;
+}
+#study-header {
+    background: $pink-400;
+}
+#exercise-header {
+    background: $green-400;
+}
+#social-header {
+    background: $purple-700;
+}
+#self-care-header {
+    background: $yellow-300;
+}
 .card__menu {
     display: flex;
     align-items: center;
@@ -66,8 +106,7 @@ main {
 }
 
 .card__stats {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 }
 
 .attribution { 
@@ -87,7 +126,6 @@ main {
 
 @media screen and (max-width: 345px) {
     #cards {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
 }

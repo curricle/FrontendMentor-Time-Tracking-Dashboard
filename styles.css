@@ -1,18 +1,18 @@
-@font-face {
-  font-family: "Rubik";
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  font-size: clamp(12.96px, 4vw, 18px);
+  line-height: 21px;
+  font-weight: 300;
   color: #FFFFFF;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  gap: 32px;
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -27,6 +27,33 @@ main {
 .card {
   background: hsl(235, 46%, 20%);
   border-radius: 24px;
+  width: 255px;
+}
+
+#profile__info {
+  display: flex;
+  flex-direction: column;
+  background: hsl(246, 80%, 60%);
+  border-radius: 24px;
+}
+#profile__info h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(28.8px, 4vw, 40px);
+  line-height: 47px;
+  font-weight: 300;
+}
+#profile__info h1 span {
+  font-size: 16px;
+  color: hsl(236, 100%, 87%);
+}
+
+#profile__picture img {
+  height: 78px;
+  width: 78px;
+  border-radius: 40px;
+  border: 3px #FFFFFF solid;
 }
 
 #profile__menu {
@@ -50,6 +77,34 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+
+.card__header {
+  height: 32px;
+}
+
+#work-header {
+  background: hsl(15, 100%, 70%);
+}
+
+#play-header {
+  background: hsl(195, 74%, 62%);
+}
+
+#study-header {
+  background: hsl(348, 100%, 68%);
+}
+
+#exercise-header {
+  background: hsl(145, 58%, 55%);
+}
+
+#social-header {
+  background: hsl(264, 64%, 52%);
+}
+
+#self-care-header {
+  background: hsl(43, 84%, 65%);
 }
 
 .card__menu {

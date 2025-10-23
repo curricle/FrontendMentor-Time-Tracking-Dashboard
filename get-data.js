@@ -1,4 +1,6 @@
 const cardsNode = document.getElementById("cards");
+const cardsHolder = document.createElement("section");
+
 var timeframeIndicator;
 
 async function getData(timescale) {
@@ -39,7 +41,7 @@ function populateCards(data, timescale) {
     for(entry of data) {
         cardsNode.insertAdjacentHTML("beforeend",
             `<section class="card">
-      <section class="card__header" id="${entry.title}-header">
+      <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
       </section>
       <section class="card__info">
         <section class="card__menu">

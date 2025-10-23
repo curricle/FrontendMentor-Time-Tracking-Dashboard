@@ -8,6 +8,10 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,14 +19,16 @@
   <main>
 
     <section id="profile" class="card">
-      <picture id="profile__picture">
-        <img src="images/image-jeremy.png" alt="Jeremy Robson headshot"/>
-      </picture>
+      <section id="profile__info">
+        <picture id="profile__picture">
+          <img src="images/image-jeremy.png" alt="Jeremy Robson headshot"/>
+        </picture>
 
-      <h1>
-        <span>Report for</span>
-        Jeremy Robson
-      </h1>
+        <h1>
+          <span>Report for</span>
+          Jeremy Robson
+        </h1>
+      </section>
     
       <section id="profile__menu">
         <button onclick="getData('daily')">Daily</button>

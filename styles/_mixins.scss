@@ -1,8 +1,14 @@
 @use "sass:math";
 @use "variables" as *;
 
-@mixin text-style($size: 18px, $line-height: 150%, $font-weight: 700) {
+@mixin text-style($size: 18px, $line-height: 21px, $font-weight: 300) {
+    font-family: "Rubik", sans-serif;
     font-size: clamp(calc($size*0.72), 4vw, $size);
     line-height: $line-height;
     font-weight: $font-weight;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
 }
