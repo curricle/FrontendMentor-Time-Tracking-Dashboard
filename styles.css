@@ -45,4 +45,10 @@ main {
   main {
     flex-direction: column;
   }
+}
+@media screen and (max-width: 345px) {
+  #cards {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
