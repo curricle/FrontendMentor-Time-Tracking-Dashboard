@@ -25,6 +25,7 @@ body {
 
 main {
     display: flex;
+    gap: $spacing-400;
 }
 
 .card {
@@ -32,9 +33,41 @@ main {
     border-radius: $spacing-300;
 }
 
+#profile__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: $spacing-200;
+
+    button {
+        text-align: left;
+        background: none;
+        border: none;
+        color: $purple-500;
+        transition: color .2s;
+
+        &:active, &:hover {
+            color: $white;
+        }
+    }
+}
+
 #cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-400;
+}
+
+.card__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card__stats {
+    display: flex;
+    flex-direction: column;
 }
 
 .attribution { 

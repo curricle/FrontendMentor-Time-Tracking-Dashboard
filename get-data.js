@@ -1,26 +1,15 @@
 const cardsNode = document.getElementById("cards");
-var cardTemplate = document.createElement("section");
-cardTemplate.innerHTML(`<section class="card">
-      <section class="card__header">
-      </section>
-      <section class="card__info">
-        <h2 class="card__title"></h2>
-        <section class="card__stats">
-          <span class="card__current_stat"></span> <!-- daily -->
-          <span class="card__previous_stat"></span> <!-- daily -->
-        </section>
-      </section>
-    </section>`);
+var timeframeIndicator;
 
 async function getData(timescale) {
     console.log(`getting ${timescale} data`);
+    setTimeframeIndicator(timescale);
     try {
         const response = await fetch('data.json');
         if(!response.ok) {
             throw new Error(`HTTP error: ${response}`)
         }
         const data = await response.json();
-        console.log(data);
         populateCards(data, timescale);
     }
     catch(error) {
@@ -28,19 +17,38 @@ async function getData(timescale) {
     }  
 }
 
+function setTimeframeIndicator(timescale) {
+  switch(timescale) {
+    case "daily":
+      timeframeIndicator = "Yesterday";
+      break;
+    case "weekly":
+      timeframeIndicator = "Last Week";
+      break;
+    case "monthly":
+      timeframeIndicator = "Last Month";
+      break;
+    default:
+      console.log("Select a timeframe");
+  }
+}
+
 function populateCards(data, timescale) {
     clearCards();
+
     for(entry of data) {
-        console.log(entry.title);
         cardsNode.insertAdjacentHTML("beforeend",
             `<section class="card">
       <section class="card__header" id="${entry.title}-header">
       </section>
       <section class="card__info">
-        <h2 class="card__title">${entry.title}</h2>
+        <section class="card__menu">
+          <h2 class="card__title">${entry.title}</h2>
+          <img src="images/icon-ellipsis.svg" />
+        </section>
         <section class="card__stats">
           <span class="card__current_stat">${entry.timeframes[timescale].current}hrs</span>
-          <span class="card__previous_stat">${entry.timeframes[timescale].previous}hrs</span>
+          <span class="card__previous_stat">${timeframeIndicator} - ${entry.timeframes[timescale].previous}hrs</span>
         </section>
       </section>
     </section>`

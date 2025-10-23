@@ -21,6 +21,7 @@ body {
 
 main {
   display: flex;
+  gap: 32px;
 }
 
 .card {
@@ -28,9 +29,39 @@ main {
   border-radius: 24px;
 }
 
+#profile__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+#profile__menu button {
+  text-align: left;
+  background: none;
+  border: none;
+  color: hsl(235, 45%, 61%);
+  transition: color 0.2s;
+}
+#profile__menu button:active, #profile__menu button:hover {
+  color: #FFFFFF;
+}
+
 #cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: column;
 }
 
 .attribution {
