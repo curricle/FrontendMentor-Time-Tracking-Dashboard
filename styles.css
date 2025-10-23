@@ -7,6 +7,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  color: #FFFFFF;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: hsl(226, 43%, 10%);
+}
+
+main {
+  display: flex;
+}
+
+.card {
+  background: hsl(235, 46%, 20%);
+  border-radius: 24px;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .attribution {
@@ -15,4 +39,10 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */

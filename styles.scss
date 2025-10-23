@@ -11,6 +11,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
+    color: $white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: $navy-950;
+}
+
+main {
+    display: flex;
+}
+
+.card {
+    background: $navy-900;
+    border-radius: $spacing-300;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .attribution { 
@@ -19,5 +43,11 @@
 
     a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
     }
 }
