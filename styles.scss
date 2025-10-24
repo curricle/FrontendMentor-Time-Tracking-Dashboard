@@ -85,14 +85,11 @@ main {
 
 .card__header {
     height: 150px;
-    margin-bottom: -100px;
+    margin-bottom: -105px;
     border-radius: $spacing-300;
     overflow: hidden;
     text-align: right;
-}
-
-.card__header-image {
-    margin-top: calc(height/4);
+    padding-right: $spacing-200;
 }
 
 #work-header {
@@ -121,6 +118,8 @@ main {
     padding: $spacing-400;
     border-radius: $spacing-300;
     background: $navy-900;
+    position: relative;
+    z-index: 99;
 }
 
 .card__menu {
@@ -128,6 +127,10 @@ main {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    h2 {
+        @include text-style($font-weight: 500);
+    }
 }
 
 .card__stats {
@@ -136,6 +139,10 @@ main {
 
 .card__current-stat {
     @include text-style($size: 56px, $line-height: 66px);
+}
+
+.card__previous-stat {
+    color: $navy-200;
 }
 
 .attribution { 

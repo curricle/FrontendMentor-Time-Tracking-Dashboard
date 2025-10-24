@@ -55,10 +55,15 @@ function populateCards(data, timescale) {
     clearCards();
 
     for(entry of data) {
-        cardsNode.insertAdjacentHTML("beforeend",
+
+      //get image height data first
+      var currentIcon = new Image();
+      currentIcon.src = `images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg`
+
+      cardsNode.insertAdjacentHTML("beforeend",
             `<section class="card">
       <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
-          <img class="card__header-image" src="images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg" />
+          <img class="card__header-image" src="images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg" style='margin-top: -${currentIcon.naturalHeight/6}px'" />
       </section>
       <section class="card__info">
         <section class="card__menu">
