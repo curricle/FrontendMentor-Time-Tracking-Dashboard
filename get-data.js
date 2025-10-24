@@ -66,21 +66,21 @@ function populateCards(data, timescale) {
       var strippedEntryTitle = entry.title.replace(" ", "-").toLowerCase();
 
       cardsNode.insertAdjacentHTML("beforeend",
-            `<section class="card">
-      <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
-          <img class="card__header-image" src="images/icon-${strippedEntryTitle}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${strippedEntryTitle}.svg`)}px'" />
-      </section>
-      <section class="card__info">
-        <section class="card__menu">
-          <h2 class="card__title">${entry.title}</h2>
-          <img src="images/icon-ellipsis.svg" />
-        </section>
-        <section class="card__stats">
-          <span class="card__current-stat">${entry.timeframes[timescale].current}hrs</span>
-          <span class="card__previous-stat">${timeframeIndicator} - ${entry.timeframes[timescale].previous}hrs</span>
-        </section>
-      </section>
-    </section>`
+        `<section class="card">
+          <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
+            <img class="card__header-image" src="images/icon-${strippedEntryTitle}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${strippedEntryTitle}.svg`)}px'" />
+          </section>
+          <section class="card__info">
+            <section class="card__menu">
+              <h2 class="card__title">${entry.title}</h2>
+              <img src="images/icon-ellipsis.svg" />
+            </section>
+            <section class="card__stats">
+              <span class="card__current-stat">${entry.timeframes[timescale].current}hrs</span>
+              <span class="card__previous-stat">${timeframeIndicator} - ${entry.timeframes[timescale].previous}hrs</span>
+            </section>
+          </section>
+        </section>`
         );
     }
 }

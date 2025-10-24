@@ -172,7 +172,7 @@ main {
   color: hsl(235, 45%, 61%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1279px) {
   main {
     flex-direction: column;
     width: 85%;
@@ -195,10 +195,20 @@ main {
     gap: 40px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   body {
     height: auto;
     padding: 40px 0;
+  }
+  #profile__info h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(17.28px, 4vw, 24px);
+    line-height: 28px;
+    font-weight: 300;
+  }
+  #profile__menu {
+    gap: auto;
+    justify-content: space-evenly;
   }
   #cards {
     display: flex;
@@ -213,5 +223,11 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+  .card__current-stat {
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(23.04px, 4vw, 32px);
+    line-height: 38px;
+    font-weight: 300;
   }
 }/*# sourceMappingURL=styles.css.map */

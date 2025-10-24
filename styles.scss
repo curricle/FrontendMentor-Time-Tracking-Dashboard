@@ -155,7 +155,7 @@ main {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1279px) {
     main {
         flex-direction: column;
         width: 85%;
@@ -183,10 +183,19 @@ main {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
     body {
         height: auto;
         padding: $spacing-500 0;
+    }
+    #profile__info {
+        h1 {
+            @include text-style($size: 24px, $line-height: 28px);
+        }
+    }
+    #profile__menu {
+        gap: auto;
+        justify-content: space-evenly;
     }
     #cards {
         @include flex-column;
@@ -200,5 +209,8 @@ main {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+    }
+    .card__current-stat {
+        @include text-style($size: 32px, $line-height: 38px);
     }
 }
