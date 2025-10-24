@@ -47,7 +47,7 @@ main {
     @include text-preset-2;
 
     span {
-        font-size: $spacing-200;
+        @include text-preset-6;
         color: $navy-200;
     }
   }
@@ -164,7 +164,7 @@ main {
     }
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 79.9rem) {
     main {
         flex-direction: column;
         width: 85%;
@@ -192,7 +192,7 @@ main {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 47.9rem) {
     body {
         height: auto;
         padding: $spacing-500 0;
