@@ -147,10 +147,10 @@ main {
 }
 
 .attribution { 
-    font-size: 11px; 
     text-align: center; 
 
     a {
+        text-decoration: none;
         color: $purple-500;
     }
 }
