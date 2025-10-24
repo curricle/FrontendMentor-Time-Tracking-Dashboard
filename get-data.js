@@ -7,6 +7,7 @@ const buttons = [dailyButton, weeklyButton, monthlyButton]
 
 var timeframeIndicator;
 
+//get default readout so page isn't empty on initialization
 document.addEventListener("DOMContentLoaded", getData("weekly"));
 
 async function getData(timescale) {
@@ -51,19 +52,21 @@ function setTimeframeIndicator(timescale) {
   }
 }
 
+function calculateIconMargin(icon) {
+  var currentIcon = new Image();
+  currentIcon.src = icon;
+  return currentIcon.naturalHeight/6;
+}
+
 function populateCards(data, timescale) {
     clearCards();
 
     for(entry of data) {
 
-      //get image height data first
-      var currentIcon = new Image();
-      currentIcon.src = `images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg`
-
       cardsNode.insertAdjacentHTML("beforeend",
             `<section class="card">
       <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
-          <img class="card__header-image" src="images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg" style='margin-top: -${currentIcon.naturalHeight/6}px'" />
+          <img class="card__header-image" src="images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg`)}px'" />
       </section>
       <section class="card__info">
         <section class="card__menu">

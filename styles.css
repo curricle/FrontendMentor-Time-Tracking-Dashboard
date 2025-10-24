@@ -157,6 +157,10 @@ main {
 }
 
 .card__previous-stat {
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(10.8px, 4vw, 15px);
+  line-height: 18px;
+  font-weight: 300;
   color: hsl(236, 100%, 87%);
 }
 
@@ -165,7 +169,7 @@ main {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(235, 45%, 61%);
 }
 
 @media screen and (max-width: 768px) {
