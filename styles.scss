@@ -122,6 +122,11 @@ main {
     background: $navy-900;
     position: relative;
     z-index: 99;
+    transition: background .2s;
+
+    &:hover {
+        background: $navy-800;
+    }
 }
 
 .card__menu {

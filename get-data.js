@@ -52,9 +52,9 @@ function setTimeframeIndicator(timescale) {
   }
 }
 
-function calculateIconMargin(icon) {
+async function calculateIconMargin(icon) {
   let currentIcon = new Image();
-  currentIcon.src = icon;
+  currentIcon.src =  await icon;
   return currentIcon.naturalHeight/6;
 }
 

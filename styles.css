@@ -128,6 +128,10 @@ main {
   background: hsl(235, 46%, 20%);
   position: relative;
   z-index: 99;
+  transition: background 0.2s;
+}
+.card__info:hover {
+  background: hsl(235, 41%, 34%);
 }
 
 .card__menu {
