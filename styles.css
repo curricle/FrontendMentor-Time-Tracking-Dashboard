@@ -76,7 +76,7 @@ main {
   color: hsl(235, 45%, 61%);
   transition: color 0.2s;
 }
-#profile__menu button:active, #profile__menu button:hover {
+#profile__menu button:active, #profile__menu button:hover, #profile__menu button.active {
   color: #FFFFFF;
 }
 
@@ -90,6 +90,12 @@ main {
   height: 150px;
   margin-bottom: -100px;
   border-radius: 24px;
+  overflow: hidden;
+  text-align: right;
+}
+
+.card__header-image {
+  margin-top: calc(height / 4);
 }
 
 #work-header {

@@ -71,7 +71,7 @@ main {
         color: $purple-500;
         transition: color .2s;
 
-        &:active, &:hover {
+        &:active, &:hover, &.active {
             color: $white;
         }
     }
@@ -87,6 +87,12 @@ main {
     height: 150px;
     margin-bottom: -100px;
     border-radius: $spacing-300;
+    overflow: hidden;
+    text-align: right;
+}
+
+.card__header-image {
+    margin-top: calc(height/4);
 }
 
 #work-header {

@@ -1,7 +1,13 @@
 const cardsNode = document.getElementById("cards");
 const cardsHolder = document.createElement("section");
+const dailyButton = document.getElementById("daily");
+const weeklyButton = document.getElementById("weekly");
+const monthlyButton = document.getElementById("monthly");
+const buttons = [dailyButton, weeklyButton, monthlyButton]
 
 var timeframeIndicator;
+
+document.addEventListener("DOMContentLoaded", getData("weekly"));
 
 async function getData(timescale) {
     console.log(`getting ${timescale} data`);
@@ -19,16 +25,26 @@ async function getData(timescale) {
     }  
 }
 
+function toggleActiveClass(activeElement) {
+  for(button of buttons) {
+    button.classList.remove("active");
+  }
+  activeElement.classList.add("active");
+}
+
 function setTimeframeIndicator(timescale) {
   switch(timescale) {
     case "daily":
       timeframeIndicator = "Yesterday";
+      toggleActiveClass(dailyButton);
       break;
     case "weekly":
       timeframeIndicator = "Last Week";
+      toggleActiveClass(weeklyButton);
       break;
     case "monthly":
       timeframeIndicator = "Last Month";
+      toggleActiveClass(monthlyButton);
       break;
     default:
       console.log("Select a timeframe");
@@ -42,6 +58,7 @@ function populateCards(data, timescale) {
         cardsNode.insertAdjacentHTML("beforeend",
             `<section class="card">
       <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
+          <img class="card__header-image" src="images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg" />
       </section>
       <section class="card__info">
         <section class="card__menu">
