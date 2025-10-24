@@ -5,7 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @include text-style;
+    @include text-preset-5;
+    font-weight: 300;
+    font-family: "Rubik", sans-serif;
     color: $white;
 }
 
@@ -42,7 +44,7 @@ main {
 
   h1 {
     @include flex-column;
-    @include text-style($size: $spacing-500, $line-height: 47px);
+    @include text-preset-2;
 
     span {
         font-size: $spacing-200;
@@ -129,7 +131,7 @@ main {
     width: 100%;
 
     h2 {
-        @include text-style($font-weight: 500);
+        font-weight: 500;
     }
 }
 
@@ -138,20 +140,27 @@ main {
 }
 
 .card__current-stat {
-    @include text-style($size: 56px, $line-height: 66px);
+    @include text-preset-1;
 }
 
 .card__previous-stat {
-    @include text-style($size: 15px, $line-height: 18px);
+    @include text-preset-6;
     color: $navy-200;
 }
 
 .attribution { 
+    @include text-preset-6;
     text-align: center; 
 
     a {
+        @include text-preset-6;
         text-decoration: none;
         color: $purple-500;
+        transition: color .2s;
+
+        &:hover {
+            color: $navy-200;
+        }
     }
 }
 
@@ -190,7 +199,7 @@ main {
     }
     #profile__info {
         h1 {
-            @include text-style($size: 24px, $line-height: 28px);
+            @include text-preset-4;
         }
     }
     #profile__menu {
@@ -211,6 +220,6 @@ main {
         justify-content: space-between;
     }
     .card__current-stat {
-        @include text-style($size: 32px, $line-height: 38px);
+        @include text-preset-3;
     }
 }

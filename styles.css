@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
-  font-size: clamp(12.96px, 4vw, 18px);
-  line-height: 21px;
+  font-size: 1.125rem;
+  line-height: 1.313rem;
   font-weight: 300;
+  font-family: "Rubik", sans-serif;
   color: #FFFFFF;
 }
 
@@ -45,10 +45,8 @@ main {
 #profile__info h1 {
   display: flex;
   flex-direction: column;
-  font-family: "Rubik", sans-serif;
-  font-size: clamp(28.8px, 4vw, 40px);
-  line-height: 47px;
-  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 2.938rem;
 }
 #profile__info h1 span {
   font-size: 16px;
@@ -138,9 +136,6 @@ main {
   width: 100%;
 }
 .card__menu h2 {
-  font-family: "Rubik", sans-serif;
-  font-size: clamp(12.96px, 4vw, 18px);
-  line-height: 21px;
   font-weight: 500;
 }
 
@@ -150,26 +145,30 @@ main {
 }
 
 .card__current-stat {
-  font-family: "Rubik", sans-serif;
-  font-size: clamp(40.32px, 4vw, 56px);
-  line-height: 66px;
-  font-weight: 300;
+  font-size: 3.5rem;
+  line-height: 4.125rem;
 }
 
 .card__previous-stat {
-  font-family: "Rubik", sans-serif;
-  font-size: clamp(10.8px, 4vw, 15px);
-  line-height: 18px;
-  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: hsl(236, 100%, 87%);
 }
 
 .attribution {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   text-align: center;
 }
 .attribution a {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   text-decoration: none;
   color: hsl(235, 45%, 61%);
+  transition: color 0.2s;
+}
+.attribution a:hover {
+  color: hsl(236, 100%, 87%);
 }
 
 @media screen and (max-width: 1279px) {
@@ -201,10 +200,8 @@ main {
     padding: 40px 0;
   }
   #profile__info h1 {
-    font-family: "Rubik", sans-serif;
-    font-size: clamp(17.28px, 4vw, 24px);
-    line-height: 28px;
-    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
   #profile__menu {
     gap: auto;
@@ -225,9 +222,7 @@ main {
     justify-content: space-between;
   }
   .card__current-stat {
-    font-family: "Rubik", sans-serif;
-    font-size: clamp(23.04px, 4vw, 32px);
-    line-height: 38px;
-    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.375rem;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -1,14 +1,32 @@
 @use "sass:math";
 @use "variables" as *;
 
-@mixin text-style($size: 18px, $line-height: 21px, $font-weight: 300) {
-    font-family: "Rubik", sans-serif;
-    font-size: clamp(calc($size*0.72), 4vw, $size);
-    line-height: $line-height;
-    font-weight: $font-weight;
-}
-
 @mixin flex-column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin text-preset-1 {
+    font-size: $fs-56;
+    line-height: $lh-66;
+}
+@mixin text-preset-2 {
+    font-size: $fs-40;
+    line-height: $lh-47;
+}
+@mixin text-preset-3 {
+    font-size: $fs-32;
+    line-height: $lh-38;
+}
+@mixin text-preset-4 {
+    font-size: $fs-24;
+    line-height: $lh-28;
+}
+@mixin text-preset-5 {
+    font-size: $fs-18;
+    line-height: $lh-21;
+}
+@mixin text-preset-6 {
+    font-size: $fs-15;
+    line-height: $lh-18;
 }
