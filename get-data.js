@@ -63,10 +63,12 @@ function populateCards(data, timescale) {
 
     for(entry of data) {
 
+      var strippedEntryTitle = entry.title.replace(" ", "-").toLowerCase();
+
       cardsNode.insertAdjacentHTML("beforeend",
             `<section class="card">
       <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
-          <img class="card__header-image" src="images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${entry.title.replace(" ", "-").toLowerCase()}.svg`)}px'" />
+          <img class="card__header-image" src="images/icon-${strippedEntryTitle}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${strippedEntryTitle}.svg`)}px'" />
       </section>
       <section class="card__info">
         <section class="card__menu">
