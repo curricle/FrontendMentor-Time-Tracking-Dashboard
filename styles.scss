@@ -158,11 +158,47 @@ main {
 @media screen and (max-width: 768px) {
     main {
         flex-direction: column;
+        width: 85%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #profile {
+        width: 100%;
+    }
+
+    #profile__info {
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #profile__menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-500;
     }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 375px) {
+    body {
+        height: auto;
+        padding: $spacing-500 0;
+    }
     #cards {
         @include flex-column;
+    }
+    .card__info {
+        height: auto;
+        gap: $spacing-100;
+        padding: $spacing-300;
+    }
+    .card__stats {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }

@@ -175,11 +175,43 @@ main {
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
+    width: 85%;
+  }
+  .card {
+    width: 100%;
+  }
+  #profile {
+    width: 100%;
+  }
+  #profile__info {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  #profile__menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
   }
 }
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 375px) {
+  body {
+    height: auto;
+    padding: 40px 0;
+  }
   #cards {
     display: flex;
     flex-direction: column;
+  }
+  .card__info {
+    height: auto;
+    gap: 8px;
+    padding: 24px;
+  }
+  .card__stats {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=styles.css.map */
