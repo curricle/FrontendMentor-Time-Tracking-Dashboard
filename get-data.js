@@ -68,7 +68,7 @@ function populateCards(data, timescale) {
       cardsNode.insertAdjacentHTML("beforeend",
         `<section class="card">
           <section class="card__header" id="${entry.title.replace(/\s+/g, "-").toLowerCase()}-header">
-            <img class="card__header-image" src="images/icon-${strippedEntryTitle}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${strippedEntryTitle}.svg`)}px'" />
+            <img class="card__header-image" src="images/icon-${strippedEntryTitle}.svg" style="margin-top: -${calculateIconMargin(`images/icon-${strippedEntryTitle}.svg`)}px" />
           </section>
           <section class="card__info">
             <section class="card__menu">
