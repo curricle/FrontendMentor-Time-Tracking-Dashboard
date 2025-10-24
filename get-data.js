@@ -63,7 +63,7 @@ function populateCards(data, timescale) {
 
     for(let entry of data) {
 
-      var strippedEntryTitle = entry.title.replace(" ", "-").toLowerCase();
+      let strippedEntryTitle = entry.title.replace(/\s+/g, "-").toLowerCase();
 
       cardsNode.insertAdjacentHTML("beforeend",
         `<section class="card">
