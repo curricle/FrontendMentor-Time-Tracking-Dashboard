@@ -1,14 +1,14 @@
 const cardsNode = document.getElementById("cards");
-const cardsHolder = document.createElement("section");
 const dailyButton = document.getElementById("daily");
 const weeklyButton = document.getElementById("weekly");
 const monthlyButton = document.getElementById("monthly");
 const buttons = [dailyButton, weeklyButton, monthlyButton]
 
-var timeframeIndicator;
+let timeframeIndicator;
 
 //get default readout so page isn't empty on initialization
-document.addEventListener("DOMContentLoaded", getData("weekly"));
+document.addEventListener("DOMContentLoaded", () =>
+  getData("weekly"));
 
 async function getData(timescale) {
     console.log(`getting ${timescale} data`);
@@ -27,7 +27,7 @@ async function getData(timescale) {
 }
 
 function toggleActiveClass(activeElement) {
-  for(button of buttons) {
+  for(let button of buttons) {
     button.classList.remove("active");
   }
   activeElement.classList.add("active");
@@ -53,7 +53,7 @@ function setTimeframeIndicator(timescale) {
 }
 
 function calculateIconMargin(icon) {
-  var currentIcon = new Image();
+  let currentIcon = new Image();
   currentIcon.src = icon;
   return currentIcon.naturalHeight/6;
 }
@@ -61,13 +61,13 @@ function calculateIconMargin(icon) {
 function populateCards(data, timescale) {
     clearCards();
 
-    for(entry of data) {
+    for(let entry of data) {
 
       var strippedEntryTitle = entry.title.replace(" ", "-").toLowerCase();
 
       cardsNode.insertAdjacentHTML("beforeend",
         `<section class="card">
-          <section class="card__header" id="${entry.title.replace(" ", "-").toLowerCase()}-header">
+          <section class="card__header" id="${entry.title.replace(/\s+/g, "-").toLowerCase()}-header">
             <img class="card__header-image" src="images/icon-${strippedEntryTitle}.svg" style='margin-top: -${calculateIconMargin(`images/icon-${strippedEntryTitle}.svg`)}px'" />
           </section>
           <section class="card__info">
